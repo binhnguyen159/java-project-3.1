@@ -89,11 +89,13 @@
             <version>2.7</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.github.spotbugs/spotbugs-maven-plugin -->
         <dependency>
             <groupId>com.github.spotbugs</groupId>
             <artifactId>spotbugs-maven-plugin</artifactId>
-            <version>4.0.4</version>
+            <version>4.8.5.0</version>
         </dependency>
+
 
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -204,12 +206,25 @@
         </pluginManagement>
     </build>
 
+<!--    <reporting>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>com.github.spotbugs</groupId>-->
+<!--                <artifactId>spotbugs-maven-plugin</artifactId>-->
+<!--                <version>4.0.4</version>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </reporting>-->
+
     <reporting>
         <plugins>
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>4.0.4</version>
+                <version>4.8.5.0</version> <!-- Use the latest version -->
+                <configuration>
+                    <failOnError>true</failOnError>
+                </configuration>
             </plugin>
         </plugins>
     </reporting>
